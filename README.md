@@ -1,2 +1,2 @@
 # MusicApp
-musical with playlist
+musicapp with playlist
