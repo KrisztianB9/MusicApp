@@ -14,43 +14,37 @@ package MusicModel;
 
 public class MusicData {
     
-    private String musicTitle;
-    private String musicAlbum;
-    private int musicLength;
-    private String musicGenre;
-    private int musicStreams;
+    private String title;
+    private String artist;
+    private String genre;
+    private int streamCount;
 
-    public MusicData(String musicTitle, String musicAlbum, int musicLength, String musicGenre,int musicStreams) {
-        this.musicTitle = musicTitle;
-        this.musicAlbum = musicAlbum;
-        this.musicLength = musicLength;
-        this.musicGenre = musicGenre;
-        this.musicStreams=musicStreams;
+    public MusicData(String musicTitle, String musicAlbum, String musicGenre,int musicStreams) {
+        this.title = musicTitle;
+        this.artist = musicAlbum;
+        this.genre = musicGenre;
+        this.streamCount=musicStreams;
     }
 
     public String getMusicTitle() {
-        return musicTitle;
+        return title;
     }
 
     public String getMusicAlbum() {
-        return musicAlbum;
-    }
-
-    public int getMusicLength() {
-        return musicLength;
+        return artist;
     }
 
     public String getMusicGenre() {
-        return musicGenre;
+        return genre;
     }
     
     public int getMusicStreams(){
-        return musicStreams;
+        return streamCount;
     }
 
     @Override
     public String toString() {
-        return "Music data:\n"+"\tTitle: "+musicTitle+"\n\tAlbum: "+musicAlbum+"\t\nLength: "+musicLength+"\n\tGenre: "+musicGenre+"\n\tStreams: "+musicStreams;
+        return "Music data:\n"+"\tTitle: "+title+"\n\tAlbum: "+artist+"\n\tGenre: "+genre+"\n\tStreams: "+streamCount;
     }
   
 }
