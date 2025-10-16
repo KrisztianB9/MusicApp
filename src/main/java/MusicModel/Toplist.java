@@ -18,9 +18,12 @@ public class Toplist {
     private String toplistGenre;
     private List<MusicData> musicList;
 
-    public Toplist(String toplistGenre, List<MusicData> musicList) {
+    public Toplist(String toplistGenre) {
+        if(toplistGenre==null || toplistGenre.isBlank()){
+            throw new IllegalArgumentException("A mufaj nem lehet ures!");
+        }
         this.toplistGenre = toplistGenre;
-        this.musicList = new ArrayList<>();
+        this.musicList=new ArrayList<>();
     }
     
     public String getToplistGenre(){
@@ -32,7 +35,11 @@ public class Toplist {
     }
     
     public void addMusicToPlaylist(MusicData a){
-        musicList.add(a);
+        this.musicList.add(a);
+    }
+    
+    public long getTotalStreamCount() {
+        return musicList.stream().mapToLong(MusicData::getMusicStreams).sum();
     }
     
 }
