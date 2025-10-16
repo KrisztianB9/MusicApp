@@ -17,7 +17,7 @@ public class MusicData {
     private String title;
     private String artist;
     private String genre;
-    private int streamCount;
+    private long streamCount;
 
     public MusicData(String musicTitle, String musicAlbum, String musicGenre,int musicStreams) {
         this.title = musicTitle;
@@ -38,13 +38,13 @@ public class MusicData {
         return genre;
     }
     
-    public int getMusicStreams(){
+    public long getMusicStreams(){
         return streamCount;
     }
 
     @Override
     public String toString() {
-        return "Music data:\n"+"\tTitle: "+title+"\n\tAlbum: "+artist+"\n\tGenre: "+genre+"\n\tStreams: "+streamCount;
+        return title+" by "+artist;
     }
   
 }
